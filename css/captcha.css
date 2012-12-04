@@ -1,0 +1,5 @@
+#canvasCaptcha button {width: 140px;}
+#canvasCaptcha .cc-margin-top-5 {margin-top: 5px;}
+#canvasCaptcha .cc-margin-top-10 {margin-top: 10px;}
+#canvasCaptchaCanvas {border: 1px solid #aaa;}
+#canvasCaptchaShape {margin-left: 60px; border: 1px solid #fff;}

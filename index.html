@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Canvas Captcha</title>
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Include css file -->
+    <link type="text/css" href="css/captcha.css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- Include javascript class -->
+    <script type="text/javascript" src="js/captcha.class.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        cc = new CanvasCaptcha();
+        cc.init();
+        $('#' + cc.resetButtonId).click(function() {
+          cc.reset();
+        });
+        $('#' + cc.submitButtonId).click(function() {
+          cc.submit();
+        });
+      });
+    </script>
+    <style type="text/css">
+      body {margin: 20px;}
+    </style>
+  </head>
+  <body>
+    <div id="canvasCaptcha">
+      <div class="row">
+        <div class="span3">
+          <div class="row cc-margin-top-5">
+            <div class="span3">
+              Please draw the following shape:
+            </div>
+          </div>
+          <div class="row cc-margin-top-10">
+            <div class="span1">
+              <canvas id="canvasCaptchaShape" width="90" height="90"></canvas>
+            </div>
+          </div>
+        </div>
+        <div class="span3">
+          <canvas id="canvasCaptchaCanvas" width="200" height="140">Your web browser does not support HTML5.  Your browser is bad, and you should feel bad.</canvas>
+        </div>
+        <div class="span3">
+          <div class="row cc-margin-top-5">
+            <div class="span3">
+              <button class="btn btn-primary" id="canvasCaptchaSubmit">Submit</button>
+            </div>
+          </div>
+          <div class="row cc-margin-top-10">
+            <div class="span3">
+              <button class="btn" id="canvasCaptchaReset">Clear</button>
+            </div>
+          </div>
+          <div class="row cc-margin-top-10">
+            <div class="span2" id="canvasCaptchaStatus"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
