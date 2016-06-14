@@ -23,13 +23,6 @@ Disclaimers
 
 
 
-Demo
-====
-
-http://www.goodsteve.co/canvas-captcha/index.html
-
-
-
 External Source
 ===============
 
